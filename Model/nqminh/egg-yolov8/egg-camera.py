@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 import cv2
 
-model = YOLO("best.pt")
+model = YOLO("/media/qminh/New Volume/qm/USTH/COURSES/B3/Introduction to Deeplearning/Dataset/best.pt")
 
 cap = cv2.VideoCapture(0)
 
@@ -15,6 +15,6 @@ while True:
     cv2.imshow("Egg Detection", annotated_frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-
 cap.release()
+
 cv2.destroyAllWindows()
